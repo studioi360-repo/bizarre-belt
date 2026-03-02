@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "perfil"
+    label: "Perfis"
+    folder: "src/content/perfil"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    fields:
+      - { label: "Slug (URL)", name: "slug", widget: "string" }
+      - { label: "Nome", name: "name", widget: "string" }
+      - { label: "Biografia", name: "bio", widget: "text" }
+      - label: "Design"
+        name: "design"
+        widget: "object"
+        fields:
+          - { label: "Tipo de Fundo", name: "bgType", widget: "select", options: ["solid", "gradient", "image"] }
+          - { label: "Valor do Fundo (Cor ou URL)", name: "bgValue", widget: "string" }
+          - { label: "Fonte (Google Fonts)", name: "fontFamily", widget: "string" }
+          - { label: "Cor do Texto", name: "textColor", widget: "color" }
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Tipo", name: "type", widget: "hidden", default: "link" }

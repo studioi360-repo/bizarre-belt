@@ -1,0 +1,15 @@
+---
+import { getCollection, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+	const perfis = await getCollection("perfil");
+	return perfis.map((p) => ({
+		params: { user: p.data.slug },
+		props: { perfil: p.data },
+	}));
+}
+
+const { perfil } = Astro.props;
+---
+
+<h1>{perfil.slug}</h1>

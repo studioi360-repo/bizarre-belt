@@ -1,0 +1,14 @@
+{
+	"slug": "ivete",
+	"name": "Ivete Giotti",
+	"bio": "Marketing Digital para Negócios Locais",
+	"design": {
+		"bgType": "gradient",
+		"bgValue": "linear-gradient(135deg, #FF007A 0%, #FFD700 100%)",
+		"fontFamily": "Montserrat",
+		"textColor": "#FFFFFF"
+	},
+	"links": [
+		{ "type": "link", "title": "Website", "url": "https://studioi360.com.br" }
+	]
+}
